@@ -1,0 +1,16 @@
+import "unknwn.idl";
+
+[
+    odl,
+    uuid(E559D616-4C46-4434-9DF7-E9D7C91F3BA5),
+    version(1.0),
+    pointer_default(unique),
+    custom(0F21F359-AB84-41E8-9A78-36D110E6D2F9, "InProcTargetTest.IStuff")
+
+]
+interface IStuff : IUnknown {
+    HRESULT _stdcall GetShortTest(
+        [in] long i,
+        [in] BOOL b,
+        [out, string] TCHAR shortText[10]);
+};
